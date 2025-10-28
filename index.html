@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title Escritores Salvadoreños>Escritores Salvadoreños</title>
+  <style>
+    :root { --max: 1100px; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, Arial, sans-serif; line-height: 1.6; color: #222; background: #f7f7f7; }
+    header { background: #0f172a; color: #fff; padding: 2rem 1rem; }
+    header h1 { margin: 0 0 .25rem; font-size: clamp(1.6rem, 3vw, 2.2rem); }
+    header p { margin: 0; opacity: .9; }
+    main { max-width: var(--max); margin: auto; padding: 1.2rem; }
+    .grid { display: grid; gap: 1.2rem; grid-template-columns: repeat(12, 1fr); }
+    .card {
+      grid-column: 1 / -1;
+      background: #fff; border-radius: 16px; overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,.08); display: grid; grid-template-columns: 1fr 2fr;
+    }
+    .card:nth-child(odd){ grid-template-columns: 2fr 1fr; }
+    .card img { width: 100%; height: 100%; object-fit: cover; min-height: 260px; }
+    .content { padding: 1rem 1.2rem; }
+    h2 { margin: 0 0 .25rem; font-size: 1.4rem; }
+    .meta { margin-top: .2rem; font-size: .95rem; color: #555; }
+    .pill { display: inline-block; font-size: .75rem; background: #e2e8f0; color: #0f172a; padding: .2rem .6rem; border-radius: 999px; margin-right: .4rem; }
+    details { margin-top: .6rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: .6rem .8rem; }
+    details summary { cursor: pointer; font-weight: 600; }
+    .why { margin-top: .8rem; padding: .6rem .8rem; background: #eef2ff; border-left: 4px solid #4f46e5; border-radius: 8px; }
+    footer { max-width: var(--max); margin: 1.2rem auto 2rem; padding: 0 1.2rem; color: #475569; font-size: .95rem; }
+    @media (max-width: 900px) {
+      .card, .card:nth-child(odd){ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Escritores salvadoreños</h1>
+    <p>Biografía breve, prólogo (original) y por qué sus libros fueron emblemáticos.</p>
+  </header>
+
+  <main>
+    <section class="grid" aria-label="Listado de autores">
+
+      <!-- 1) Salarrué -->
+      <article class="card" id="salarrue" aria-labelledby="salarrue-titulo">
+        <img src="img/Salarrué.jpg" alt="Retrato de Salarrué (Salvador Salazar Arrué)" />
+        <div class="content">
+          <h2 id="salarrue-titulo">Salarrué (1899–1975)</h2>
+          <div class="meta">
+            <span class="pill">Narrativa</span>
+            <span class="pill">Cuento</span>
+            <span class="pill">Pintor</span>
+          </div>
+          <p><strong>Biografía:</strong> Salvador Salazar Arrué, conocido como <em>Salarrué</em>, fue cuentista, novelista y artista plástico. Su obra recoge el habla popular y el paisaje rural salvadoreño con ternura y humor, creando personajes memorables y atmósferas mágicas.</p>
+
+          <details>
+            <summary>Prólogo (original) para <em>Cuentos de barro</em></summary>
+            <p>
+              Estos relatos nacen del polvo de los caminos y del murmullo de los cafetales. Cada historia es
+              un retazo de barro tibio donde cabe una sonrisa pícara, un rezo antiguo y la dignidad callada
+              de la gente sencilla. Si el lector al terminar siente en la yema de los dedos la aspereza de la
+              tierra, entonces el libro habrá cumplido su destino.
+            </p>
+          </details>
+
+          <div class="why">
+            <strong>¿Por qué fue famoso?</strong>
+            <ul>
+              <li><em>Cuentos de barro</em> (1933) se volvió símbolo de identidad nacional por su lenguaje costumbrista y escenarios rurales.</li>
+              <li>Rescató voces y modismos del pueblo, acercando la literatura a la vida cotidiana.</li>
+              <li>Influyó a generaciones de cuentistas centroamericanos en estilo y temática.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2) Claudia Lars -->
+      <article class="card" id="claudia-lars" aria-labelledby="lars-titulo">
+        <img src="img/Claudia Lars.jpg" alt="Retrato de Claudia Lars" />
+        <div class="content">
+          <h2 id="lars-titulo">Claudia Lars (1899–1974)</h2>
+          <div class="meta">
+            <span class="pill">Poesía</span>
+            <span class="pill">Lírica</span>
+          </div>
+          <p><strong>Biografía:</strong> Margarita del Carmen Brannon Vega, conocida como <em>Claudia Lars</em>, es una de las voces poéticas más queridas de El Salvador. Su poesía mezcla espiritualidad, naturaleza y memoria íntima con una musicalidad delicada.</p>
+
+          <details>
+            <summary>Prólogo (original) para <em>La casa de vidrio</em></summary>
+            <p>
+              Este libro es una casa transparente: adentro se ven los latidos del asombro. Cada poema abre una
+              ventana, y por ella entran hojas, lluvia y pasos. Quien cruce el umbral no hallará paredes, sino
+              el eco de una infancia que aún aprende a nombrar la luz.
+            </p>
+          </details>
+
+          <div class="why">
+            <strong>¿Por qué fue famosa?</strong>
+            <ul>
+              <li>Su obra lírica consolidó un tono propio, elegante y cercano, que la ubicó entre las grandes poetas centroamericanas.</li>
+              <li>Libros como <em>La casa de vidrio</em> y <em>Romances de Norte y Sur</em> se leen en colegios y universidades por su sensibilidad y forma.</li>
+              <li>Su influencia se siente en poetas contemporáneas que exploran lo íntimo y lo natural.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3) Roque Dalton -->
+      <article class="card" id="roque-dalton" aria-labelledby="dalton-titulo">
+        <img src="img/Roque Dalton.jpg" alt="Retrato de Roque Dalton" />
+        <div class="content">
+          <h2 id="dalton-titulo">Roque Dalton (1935–1975)</h2>
+          <div class="meta">
+            <span class="pill">Poesía</span>
+            <span class="pill">Ensayo</span>
+          </div>
+          <p><strong>Biografía:</strong> Poeta, ensayista y periodista, Dalton combinó ironía, ternura y crítica social. Su voz potente convirtió la poesía en un instrumento de memoria y conciencia latinoamericana.</p>
+
+          <details>
+            <summary>Prólogo (original) para <em>Taberna y otros lugares</em></summary>
+            <p>
+              Aquí la ciudad conversa en voz baja: vasos chocan, las risas se quiebran y el poema recoge sus
+              restos para volverlos canto. Este libro es un mapa nocturno donde el caminante aprende que la
+              esperanza también se escribe en servilletas.
+            </p>
+          </details>
+
+          <div class="why">
+            <strong>¿Por qué fue famoso?</strong>
+            <ul>
+              <li><em>Taberna y otros lugares</em> y <em>Las historias prohibidas del Pulgarcito</em> renovaron la poesía salvadoreña con humor, política y habla popular.</li>
+              <li>Su mirada crítica y humana lo convirtió en referente continental.</li>
+              <li>Se estudia por su innovación formal y su compromiso con la realidad social.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Créditos de imágenes:</strong> usa fotos libres de derechos o tuyas propias. Colócalas en <code>img/</code> y actualiza el atributo <code>src</code>.
+      Ejemplo: <code>img/salarrue.jpg</code>, <code>img/claudia-lars.jpg</code>, <code>img/roque-dalton.jpg</code>.
+    </p>
+    <p>Hecho por: <em>Tu nombre y sección</em> • Fecha: <em>dd/mm/aaaa</em></p>
+  </footer>
+</body>
+</html>
