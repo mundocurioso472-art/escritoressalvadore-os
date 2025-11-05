@@ -4,33 +4,93 @@
   <meta charset="UTF-8" />
   <meta name="google-site-verification" content="oQkvMb7A6Y68JnKITvefZiw_ny2z5bT9P8ceZcadSBo" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title Escritores Salvadoreños>Escritores Salvadoreños</title>
+  <title>Escritores Salvadoreños</title>
   <style>
     :root { --max: 1100px; }
     * { box-sizing: border-box; }
     body { margin: 0; font-family: system-ui, Arial, sans-serif; line-height: 1.6; color: #222; background: #f7f7f7; }
-    header { background: #0f172a; color: #fff; padding: 2rem 1rem; }
-    header h1 { margin: 0 0 .25rem; font-size: clamp(1.6rem, 3vw, 2.2rem); }
+
+    header {
+      background: #0f172a;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 .25rem;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+    }
     header p { margin: 0; opacity: .9; }
+
     main { max-width: var(--max); margin: auto; padding: 1.2rem; }
     .grid { display: grid; gap: 1.2rem; grid-template-columns: repeat(12, 1fr); }
+
     .card {
       grid-column: 1 / -1;
-      background: #fff; border-radius: 16px; overflow: hidden;
-      box-shadow: 0 8px 24px rgba(0,0,0,.08); display: grid; grid-template-columns: 1fr 2fr;
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,.08);
+      display: grid;
+      grid-template-columns: 1fr 2fr;
     }
     .card:nth-child(odd){ grid-template-columns: 2fr 1fr; }
-    .card img { width: 100%; height: 100%; object-fit: cover; min-height: 260px; }
+
+    /* 🔧 Ajuste para mostrar todas las imágenes completas sin recorte */
+    .card img {
+      width: 100%;
+      height: 320px;          /* Misma altura para todas */
+      object-fit: contain;    /* Muestra toda la imagen sin cortar */
+      object-position: center;
+      background: #f1f5f9;    /* Fondo suave en caso de bandas vacías */
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+    }
+
+    /* Ajuste para pantallas pequeñas (celulares) */
+    @media (max-width: 900px) {
+      .card, .card:nth-child(odd){ grid-template-columns: 1fr; }
+      .card img {
+        height: 260px;
+        border-radius: 16px 16px 0 0;
+      }
+    }
+
     .content { padding: 1rem 1.2rem; }
     h2 { margin: 0 0 .25rem; font-size: 1.4rem; }
     .meta { margin-top: .2rem; font-size: .95rem; color: #555; }
-    .pill { display: inline-block; font-size: .75rem; background: #e2e8f0; color: #0f172a; padding: .2rem .6rem; border-radius: 999px; margin-right: .4rem; }
-    details { margin-top: .6rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: .6rem .8rem; }
+    .pill {
+      display: inline-block;
+      font-size: .75rem;
+      background: #e2e8f0;
+      color: #0f172a;
+      padding: .2rem .6rem;
+      border-radius: 999px;
+      margin-right: .4rem;
+    }
+    details {
+      margin-top: .6rem;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: .6rem .8rem;
+    }
     details summary { cursor: pointer; font-weight: 600; }
-    .why { margin-top: .8rem; padding: .6rem .8rem; background: #eef2ff; border-left: 4px solid #4f46e5; border-radius: 8px; }
-    footer { max-width: var(--max); margin: 1.2rem auto 2rem; padding: 0 1.2rem; color: #475569; font-size: .95rem; }
-    @media (max-width: 900px) {
-      .card, .card:nth-child(odd){ grid-template-columns: 1fr; }
+    .why {
+      margin-top: .8rem;
+      padding: .6rem .8rem;
+      background: #eef2ff;
+      border-left: 4px solid #4f46e5;
+      border-radius: 8px;
+    }
+
+    footer {
+      max-width: var(--max);
+      margin: 1.2rem auto 2rem;
+      padding: 0 1.2rem;
+      color: #475569;
+      font-size: .95rem;
+      text-align: center;
     }
   </style>
 </head>
@@ -107,7 +167,39 @@
         </div>
       </article>
 
-      <!-- 3) Roque Dalton -->
+      <!-- 3) Alfredo Espino -->
+      <article class="card" id="alfredo-espino" aria-labelledby="espino-titulo">
+        <img src="img/Alfredo Espino.jpg" alt="Retrato de Alfredo Espino" />
+        <div class="content">
+          <h2 id="espino-titulo">Alfredo Espino (1900–1928)</h2>
+          <div class="meta">
+            <span class="pill">Poesía</span>
+            <span class="pill">Romanticismo</span>
+          </div>
+
+          <p><strong>Biografía:</strong> Alfredo Espino fue un joven poeta salvadoreño conocido por su único libro <em>Jícaras Tristes</em>. A través de su poesía sencilla y natural, logró reflejar el amor por su tierra, la naturaleza y la vida cotidiana del pueblo salvadoreño. Aunque murió muy joven, dejó una huella profunda en la literatura nacional.</p>
+
+          <details>
+            <summary>Prólogo (original) para <em>Jícaras Tristes</em></summary>
+            <p>
+              En estas páginas florece el alma del campo. Cada verso es una sonrisa del maíz, una lágrima del río o el
+              canto de los pájaros al amanecer. Su poesía invita a mirar lo pequeño con ternura y a sentir orgullo por
+              lo simple y verdadero.
+            </p>
+          </details>
+
+          <div class="why">
+            <strong>¿Por qué fue famoso?</strong>
+            <ul>
+              <li>Por su libro <em>Jícaras Tristes</em>, considerado una joya de la poesía salvadoreña.</li>
+              <li>Porque escribió con amor por la naturaleza, la patria y la gente humilde.</li>
+              <li>Su estilo fresco, puro y sensible lo convirtió en símbolo de la juventud poética de El Salvador.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4) Roque Dalton -->
       <article class="card" id="roque-dalton" aria-labelledby="dalton-titulo">
         <img src="img/Roque Dalton.jpg" alt="Retrato de Roque Dalton" />
         <div class="content">
@@ -142,10 +234,8 @@
   </main>
 
   <footer>
-    <p><strong>Créditos de imágenes:</strong> usa fotos libres de derechos o tuyas propias. Colócalas en <code>img/</code> y actualiza el atributo <code>src</code>.
-      Ejemplo: <code>img/salarrue.jpg</code>, <code>img/claudia-lars.jpg</code>, <code>img/roque-dalton.jpg</code>.
-    </p>
-    <p>Hecho por: <em>Tu nombre y sección</em> • Fecha: <em>dd/mm/aaaa</em></p>
+   
+    <p>Hecho por: Anónimo</p>
   </footer>
 </body>
 </html>
