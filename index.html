@@ -1,241 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="google-site-verification" content="oQkvMb7A6Y68JnKITvefZiw_ny2z5bT9P8ceZcadSBo" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Escritores Salvadoreños</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paz Mental</title>
   <style>
-    :root { --max: 1100px; }
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: system-ui, Arial, sans-serif; line-height: 1.6; color: #222; background: #f7f7f7; }
-
-    header {
-      background: #0f172a;
-      color: #fff;
-      padding: 2rem 1rem;
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #eaf7f0;
+      color: #2b3d33;
       text-align: center;
+      padding: 40px;
     }
-    header h1 {
-      margin: 0 0 .25rem;
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
+    h1 {
+      color: #1f6f5a;
     }
-    header p { margin: 0; opacity: .9; }
-
-    main { max-width: var(--max); margin: auto; padding: 1.2rem; }
-    .grid { display: grid; gap: 1.2rem; grid-template-columns: repeat(12, 1fr); }
-
-    .card {
-      grid-column: 1 / -1;
-      background: #fff;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 8px 24px rgba(0,0,0,.08);
-      display: grid;
-      grid-template-columns: 1fr 2fr;
+    img {
+      width: 300px;
+      border-radius: 15px;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
-    .card:nth-child(odd){ grid-template-columns: 2fr 1fr; }
-
-    /* 🔧 Ajuste para mostrar todas las imágenes completas sin recorte */
-    .card img {
-      width: 100%;
-      height: 320px;          /* Misma altura para todas */
-      object-fit: contain;    /* Muestra toda la imagen sin cortar */
-      object-position: center;
-      background: #f1f5f9;    /* Fondo suave en caso de bandas vacías */
-      border-top-left-radius: 16px;
-      border-bottom-left-radius: 16px;
-    }
-
-    /* Ajuste para pantallas pequeñas (celulares) */
-    @media (max-width: 900px) {
-      .card, .card:nth-child(odd){ grid-template-columns: 1fr; }
-      .card img {
-        height: 260px;
-        border-radius: 16px 16px 0 0;
-      }
-    }
-
-    .content { padding: 1rem 1.2rem; }
-    h2 { margin: 0 0 .25rem; font-size: 1.4rem; }
-    .meta { margin-top: .2rem; font-size: .95rem; color: #555; }
-    .pill {
-      display: inline-block;
-      font-size: .75rem;
-      background: #e2e8f0;
-      color: #0f172a;
-      padding: .2rem .6rem;
-      border-radius: 999px;
-      margin-right: .4rem;
-    }
-    details {
-      margin-top: .6rem;
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      padding: .6rem .8rem;
-    }
-    details summary { cursor: pointer; font-weight: 600; }
-    .why {
-      margin-top: .8rem;
-      padding: .6rem .8rem;
-      background: #eef2ff;
-      border-left: 4px solid #4f46e5;
-      border-radius: 8px;
-    }
-
-    footer {
-      max-width: var(--max);
-      margin: 1.2rem auto 2rem;
-      padding: 0 1.2rem;
-      color: #475569;
-      font-size: .95rem;
-      text-align: center;
+    p {
+      max-width: 600px;
+      margin: 20px auto;
+      line-height: 1.6;
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Escritores salvadoreños</h1>
-    <p>Biografía breve, prólogo (original) y por qué sus libros fueron emblemáticos.</p>
-  </header>
-
-  <main>
-    <section class="grid" aria-label="Listado de autores">
-
-      <!-- 1) Salarrué -->
-      <article class="card" id="salarrue" aria-labelledby="salarrue-titulo">
-        <img src="img/Salarrué.jpg" alt="Retrato de Salarrué (Salvador Salazar Arrué)" />
-        <div class="content">
-          <h2 id="salarrue-titulo">Salarrué (1899–1975)</h2>
-          <div class="meta">
-            <span class="pill">Narrativa</span>
-            <span class="pill">Cuento</span>
-            <span class="pill">Pintor</span>
-          </div>
-          <p><strong>Biografía:</strong> Salvador Salazar Arrué, conocido como <em>Salarrué</em>, fue cuentista, novelista y artista plástico. Su obra recoge el habla popular y el paisaje rural salvadoreño con ternura y humor, creando personajes memorables y atmósferas mágicas.</p>
-
-          <details>
-            <summary>Prólogo (original) para <em>Cuentos de barro</em></summary>
-            <p>
-              Estos relatos nacen del polvo de los caminos y del murmullo de los cafetales. Cada historia es
-              un retazo de barro tibio donde cabe una sonrisa pícara, un rezo antiguo y la dignidad callada
-              de la gente sencilla. Si el lector al terminar siente en la yema de los dedos la aspereza de la
-              tierra, entonces el libro habrá cumplido su destino.
-            </p>
-          </details>
-
-          <div class="why">
-            <strong>¿Por qué fue famoso?</strong>
-            <ul>
-              <li><em>Cuentos de barro</em> (1933) se volvió símbolo de identidad nacional por su lenguaje costumbrista y escenarios rurales.</li>
-              <li>Rescató voces y modismos del pueblo, acercando la literatura a la vida cotidiana.</li>
-              <li>Influyó a generaciones de cuentistas centroamericanos en estilo y temática.</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <!-- 2) Claudia Lars -->
-      <article class="card" id="claudia-lars" aria-labelledby="lars-titulo">
-        <img src="img/Claudia Lars.jpg" alt="Retrato de Claudia Lars" />
-        <div class="content">
-          <h2 id="lars-titulo">Claudia Lars (1899–1974)</h2>
-          <div class="meta">
-            <span class="pill">Poesía</span>
-            <span class="pill">Lírica</span>
-          </div>
-          <p><strong>Biografía:</strong> Margarita del Carmen Brannon Vega, conocida como <em>Claudia Lars</em>, es una de las voces poéticas más queridas de El Salvador. Su poesía mezcla espiritualidad, naturaleza y memoria íntima con una musicalidad delicada.</p>
-
-          <details>
-            <summary>Prólogo (original) para <em>La casa de vidrio</em></summary>
-            <p>
-              Este libro es una casa transparente: adentro se ven los latidos del asombro. Cada poema abre una
-              ventana, y por ella entran hojas, lluvia y pasos. Quien cruce el umbral no hallará paredes, sino
-              el eco de una infancia que aún aprende a nombrar la luz.
-            </p>
-          </details>
-
-          <div class="why">
-            <strong>¿Por qué fue famosa?</strong>
-            <ul>
-              <li>Su obra lírica consolidó un tono propio, elegante y cercano, que la ubicó entre las grandes poetas centroamericanas.</li>
-              <li>Libros como <em>La casa de vidrio</em> y <em>Romances de Norte y Sur</em> se leen en colegios y universidades por su sensibilidad y forma.</li>
-              <li>Su influencia se siente en poetas contemporáneas que exploran lo íntimo y lo natural.</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <!-- 3) Alfredo Espino -->
-      <article class="card" id="alfredo-espino" aria-labelledby="espino-titulo">
-        <img src="img/Alfredo Espino.jpg" alt="Retrato de Alfredo Espino" />
-        <div class="content">
-          <h2 id="espino-titulo">Alfredo Espino (1900–1928)</h2>
-          <div class="meta">
-            <span class="pill">Poesía</span>
-            <span class="pill">Romanticismo</span>
-          </div>
-
-          <p><strong>Biografía:</strong> Alfredo Espino fue un joven poeta salvadoreño conocido por su único libro <em>Jícaras Tristes</em>. A través de su poesía sencilla y natural, logró reflejar el amor por su tierra, la naturaleza y la vida cotidiana del pueblo salvadoreño. Aunque murió muy joven, dejó una huella profunda en la literatura nacional.</p>
-
-          <details>
-            <summary>Prólogo (original) para <em>Jícaras Tristes</em></summary>
-            <p>
-              En estas páginas florece el alma del campo. Cada verso es una sonrisa del maíz, una lágrima del río o el
-              canto de los pájaros al amanecer. Su poesía invita a mirar lo pequeño con ternura y a sentir orgullo por
-              lo simple y verdadero.
-            </p>
-          </details>
-
-          <div class="why">
-            <strong>¿Por qué fue famoso?</strong>
-            <ul>
-              <li>Por su libro <em>Jícaras Tristes</em>, considerado una joya de la poesía salvadoreña.</li>
-              <li>Porque escribió con amor por la naturaleza, la patria y la gente humilde.</li>
-              <li>Su estilo fresco, puro y sensible lo convirtió en símbolo de la juventud poética de El Salvador.</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <!-- 4) Roque Dalton -->
-      <article class="card" id="roque-dalton" aria-labelledby="dalton-titulo">
-        <img src="img/Roque Dalton.jpg" alt="Retrato de Roque Dalton" />
-        <div class="content">
-          <h2 id="dalton-titulo">Roque Dalton (1935–1975)</h2>
-          <div class="meta">
-            <span class="pill">Poesía</span>
-            <span class="pill">Ensayo</span>
-          </div>
-          <p><strong>Biografía:</strong> Poeta, ensayista y periodista, Dalton combinó ironía, ternura y crítica social. Su voz potente convirtió la poesía en un instrumento de memoria y conciencia latinoamericana.</p>
-
-          <details>
-            <summary>Prólogo (original) para <em>Taberna y otros lugares</em></summary>
-            <p>
-              Aquí la ciudad conversa en voz baja: vasos chocan, las risas se quiebran y el poema recoge sus
-              restos para volverlos canto. Este libro es un mapa nocturno donde el caminante aprende que la
-              esperanza también se escribe en servilletas.
-            </p>
-          </details>
-
-          <div class="why">
-            <strong>¿Por qué fue famoso?</strong>
-            <ul>
-              <li><em>Taberna y otros lugares</em> y <em>Las historias prohibidas del Pulgarcito</em> renovaron la poesía salvadoreña con humor, política y habla popular.</li>
-              <li>Su mirada crítica y humana lo convirtió en referente continental.</li>
-              <li>Se estudia por su innovación formal y su compromiso con la realidad social.</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-    </section>
-  </main>
-
-  <footer>
-   
-    <p>Hecho por: Anónimo</p>
-  </footer>
+  <h1>🌿 La Paz Mental 🌿</h1>
+  <img src="img/paz_mental.jpg" alt="Persona meditando en calma">
+  <p>
+    La paz mental es un estado de tranquilidad interior que se alcanza cuando aprendemos 
+    a soltar lo que no podemos controlar y a vivir el presente con serenidad. 
+    No significa ausencia de problemas, sino equilibrio emocional frente a ellos.
+  </p>
+  <p>
+    Tomar un momento para respirar, reflexionar y agradecer nos ayuda a fortalecer 
+    la mente y el corazón. La paz empieza dentro de ti. ✨
+  </p>
 </body>
 </html>
